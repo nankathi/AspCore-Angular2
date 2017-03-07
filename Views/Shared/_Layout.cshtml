@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - ECD.V2.Client</title>
+        <base href="/" />
+        <link rel="stylesheet" href="~/dist/vendor.css" asp-append-version="true" />
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("active");
+        });
+        </script>
+    </head>
+    <body>
+        @RenderBody()
+
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
